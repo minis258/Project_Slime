@@ -513,3 +513,42 @@ System memory in use after: 88.1 MB.
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2321.
 Total: 2.135400 ms (FindLiveObjects: 0.286700 ms CreateObjectMapping: 0.063500 ms MarkObjects: 1.673100 ms  DeleteObjects: 0.110600 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 937.820989 seconds.
+  path: Assets/GFX
+  artifactKey: Guid(9a25215621fdf3f4c889859f5c179e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GFX using Guid(9a25215621fdf3f4c889859f5c179e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25fbb66c4bf5231ca67733a98d2d5e68') in 0.011388 seconds
+  Import took 0.016159 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000959 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.250 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.2 MB.
+System memory in use after: 88.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2326.
+Total: 3.104800 ms (FindLiveObjects: 0.340400 ms CreateObjectMapping: 0.123700 ms MarkObjects: 2.471800 ms  DeleteObjects: 0.167200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 4488.929116 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(c530bd8c16757ee418ba9d517cb88bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(c530bd8c16757ee418ba9d517cb88bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0f2a7830919bae3730ddd12f75b75cb') in 0.051803 seconds
+  Import took 0.077082 seconds .
+
