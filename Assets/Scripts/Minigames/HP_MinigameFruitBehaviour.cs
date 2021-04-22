@@ -14,7 +14,6 @@ namespace Minigame
         // Start is called before the first frame update
         void Start()
         {
-            p_HpMiniGame = GetComponent<HP_Minigame>();
             p_Rigid = GetComponent<Rigidbody2D>();
         }
 
@@ -27,7 +26,6 @@ namespace Minigame
                     {
                         p_HpMiniGame.AddScore(p_Value);
                         Destroy(gameObject);
-                        Debug.Log("here");
                     }
                     if (tag == "BadFruit")
                     {
@@ -46,6 +44,11 @@ namespace Minigame
                     break;
 
             }
+        }
+
+        public void SetMinigame(HP_Minigame _minigame)
+        {
+            p_HpMiniGame = _minigame;
         }
     }
 }

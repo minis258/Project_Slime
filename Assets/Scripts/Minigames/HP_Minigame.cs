@@ -36,7 +36,7 @@ namespace Minigame {
         void Update()
         {
             SpawnFruits();
-            SetText();
+            SetText();     
         }
 
         private void SetSpawnTimer(float _spawnrate, float _spawntime)
@@ -60,7 +60,8 @@ namespace Minigame {
                 {
                     p_SpawnPoints = Random.Range(0, p_Spawners.Length);
                     p_SpawnFruits = Random.Range(0, p_FruitPrefabs.Length);
-                    Instantiate(p_FruitPrefabs[p_SpawnFruits], p_Spawners[p_SpawnPoints].position, Quaternion.identity);
+                    GameObject obj = Instantiate(p_FruitPrefabs[p_SpawnFruits], p_Spawners[p_SpawnPoints].position, Quaternion.identity);
+                    obj.GetComponent<HP_MinigameFruitBehaviour>().SetMinigame(this);
                 }
             }
         }
@@ -72,12 +73,12 @@ namespace Minigame {
 
         public void AddScore(int _point)
         {
-            p_Score = p_Score += _point;
+            p_Score += _point;
         }
 
         public void SubtractHP(int _point)
         {
-            PlayerHP = PlayerHP -= _point;
+            PlayerHP -= _point;
         }
     }
 }
