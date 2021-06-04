@@ -8,18 +8,31 @@ public class Caro_Animation_Script : MonoBehaviour
     public GameObject Archer;
     public GameObject Fighter;
 
-    private Animation p_Anim;
+    public GameObject Start_Buttons;
+    public GameObject Archer_Anim_Buttons;
+    public GameObject Fighter_Anim_Buttons;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Activate_Archer_Buttons()
     {
-        p_Anim = gameObject.GetComponent<Animation>();
+        Start_Buttons.SetActive(false);
+        Fighter_Anim_Buttons.SetActive(false);
+        Archer_Anim_Buttons.SetActive(true);
+        Activate_Archer();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Activate_Fighter_Buttons()
     {
-        
+        Start_Buttons.SetActive(false);
+        Archer_Anim_Buttons.SetActive(false);
+        Fighter_Anim_Buttons.SetActive(true);
+        Activate_Fighter();
+    }
+    public void Back_Button()
+    {
+        Archer_Anim_Buttons.SetActive(false);
+        Fighter_Anim_Buttons.SetActive(false);
+        Fighter.SetActive(false);
+        Archer.SetActive(false);
+        Start_Buttons.SetActive(true);
     }
 
     public void Activate_Archer()
@@ -36,32 +49,30 @@ public class Caro_Animation_Script : MonoBehaviour
 
     public void PlayArcherIdle()
     {
-        p_Anim.Stop();
-        p_Anim.Play("Archer_Idle");
+        Archer.GetComponent<Animator>().Play("Archer_Idle");
     }
     public void PlayArcherAttack()
     {
-        p_Anim.Stop();
-        p_Anim.Play("Archer_Attack");
+        Archer.GetComponent<Animator>().Play("Archer_Attack");
     }
     public void PlayArcherDeath()
     {
-        p_Anim.Stop();
-        p_Anim.Play("Archer_Death");
+        Archer.GetComponent<Animator>().Play("Archer_Death");
     }
     public void PlayFighterIdle()
     {
-        p_Anim.Stop();
-        p_Anim.Play("Fighter_Idle");
+        Fighter.GetComponent<Animator>().Play("Fighter_Idle");
     }
     public void PlayFighterAttack()
     {
-        p_Anim.Stop();
-        p_Anim.Play("Fighter_Attack");
+        Fighter.GetComponent<Animator>().Play("Fighter_Attack");
     }
     public void PlayFighterDeath()
     {
-        p_Anim.Stop();
-        p_Anim.Play("Fighter_Death");
+        Fighter.GetComponent<Animator>().Play("Fighter_Death");
+    }
+    public void Quit_Game()
+    {
+        Application.Quit();    
     }
 }
