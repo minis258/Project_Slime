@@ -172,3 +172,79 @@ Received Import Request.
 Start importing Assets/Animations/Caro/Fighter/The_Fighter.controller using Guid(837164abaf15f6c409d763996e67bfd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57757bd070dc711313318d5ea838903a') in 0.025204 seconds
   Import took 0.046445 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001321 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.077 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1856 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2326.
+Total: 2.464300 ms (FindLiveObjects: 0.453400 ms CreateObjectMapping: 0.167800 ms MarkObjects: 1.715000 ms  DeleteObjects: 0.126400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 160.709595 seconds.
+  path: Assets/Animations/Caro/Archer/The_Archer.psb
+  artifactKey: Guid(9d93a7221ac8a42468ab91ea890bcc00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Caro/Archer/The_Archer.psb using Guid(9d93a7221ac8a42468ab91ea890bcc00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e877f101f53eb66c147f3482f588d9') in 0.266445 seconds
+  Import took 0.270594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.026443 seconds.
+  path: Assets/Animations/Caro/Fighter/The_Fighter.psb
+  artifactKey: Guid(3cb607f811cda164a97ec6fd4443e24c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Caro/Fighter/The_Fighter.psb using Guid(3cb607f811cda164a97ec6fd4443e24c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa5852ae2b28ffa210c4f21ebfeada7') in 0.096841 seconds
+  Import took 0.101850 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001104 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.165 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1866 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.5 MB.
+System memory in use after: 90.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2375.
+Total: 3.248400 ms (FindLiveObjects: 0.400100 ms CreateObjectMapping: 0.096600 ms MarkObjects: 2.614800 ms  DeleteObjects: 0.133400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 55.838903 seconds.
+  path: Assets/Animation/Caro
+  artifactKey: Guid(22fd9241dff81084094aedcf3400c4a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Caro using Guid(22fd9241dff81084094aedcf3400c4a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deefb8b27cebd6023d27ab377e42c13f') in 0.012494 seconds
+  Import took 0.018541 seconds .
+
