@@ -8,13 +8,27 @@ namespace Minigame
     {
         [SerializeField]
         private Transform[] p_Spawners;
+        [SerializeField]
+        private Transform p_StoneSpawner;
         private int p_SpawnPoints;
         [SerializeField]
-        private GameObject p_EnemyPrefab;
+        private GameObject p_ShortStonePrefab;
+        [SerializeField]
+        private GameObject p_LongStonePrefab;
+        [SerializeField]
+        private GameObject p_VerticalStonePrefab;
+        [SerializeField]
+        private GameObject p_HorizontalStonePrefab;
         [SerializeField]
         private float p_Spawnrate;
         [SerializeField]
         private float p_Spawntime;
+        [SerializeField]
+        private float p_StoneSpawnRange;
+        [SerializeField]
+        private float p_MinSpawnRange;
+        [SerializeField]
+        private float p_MaxSpawnRange;
 
         public bool IsActive;
         // Start is called before the first frame update
@@ -27,7 +41,7 @@ namespace Minigame
         // Update is called once per frame
         void Update()
         {
-            SpawnEnemy();
+            SpawnStone();
         }
 
         private void SetSpawnTimer(float _spawnrate, float _spawntime)
@@ -36,8 +50,11 @@ namespace Minigame
             p_Spawntime = _spawntime;
         }
 
-        private void SpawnEnemy()
+        private void SpawnStone()
         {
+            p_MinSpawnRange = p_StoneSpawner.transform.position.x - p_StoneSpawnRange;
+            p_MaxSpawnRange = p_StoneSpawner.transform.position.x + p_StoneSpawnRange;
+
             if (Time.time > p_Spawntime)
             {
                 p_Spawntime = Time.time + p_Spawnrate;
@@ -50,7 +67,7 @@ namespace Minigame
                 if (IsActive)
                 {
                     p_SpawnPoints = Random.Range(0, p_Spawners.Length);
-                    GameObject obj = Instantiate(p_EnemyPrefab, p_Spawners[p_SpawnPoints].position, Quaternion.identity);
+                    GameObject obj = Instantiate(p_ShortStonePrefab, p_Spawners[p_SpawnPoints].position, Quaternion.identity);
                 }
             }
         }
