@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minh.unity
     guid: d62e7cf7096decf438b61fa06b251e9a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Robin.unity
     guid: 302eaf923a68f394896426b891bc3807
   m_configObjects: {}
