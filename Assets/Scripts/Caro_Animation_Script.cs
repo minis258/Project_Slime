@@ -1,8 +1,12 @@
+//###### Created by Minh ####
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This Script is only for the artist Caro build only
+/// </summary>
 public class Caro_Animation_Script : MonoBehaviour
 {
     public GameObject Archer;

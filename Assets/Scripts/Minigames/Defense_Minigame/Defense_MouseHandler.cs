@@ -7,6 +7,7 @@ namespace Minigame
 {
     public class Defense_MouseHandler : MonoBehaviour
     {
+        //Variables
         private bool p_IsDragged = false;
         [SerializeField]
         private Collider2D p_ShortStoneCol;
@@ -21,9 +22,7 @@ namespace Minigame
         // Start is called before the first frame update
         void Start()
         {
-            //p_RootPos = transform.position;
             p_Camera = FindObjectOfType<Camera>();
-            //gameObject.GetComponent<Defense_MouseHandler>();
         }
 
         // Update is called once per frame
@@ -42,7 +41,9 @@ namespace Minigame
         {
             p_IsDragged = false;
         }
-
+        /// <summary>
+        /// Stone dragger with a max range of x axis 
+        /// </summary>
         private void CheckDragging()
         {
             if (p_IsDragged)

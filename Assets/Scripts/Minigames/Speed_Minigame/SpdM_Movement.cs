@@ -21,7 +21,9 @@ namespace Minigame
         {
             CheckMovement();
         }
-
+        /// <summary>
+        /// Player movement
+        /// </summary>
         private void CheckMovement()
         {
             p_PlayerInput = Input.GetAxis("Horizontal");

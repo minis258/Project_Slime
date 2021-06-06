@@ -6,6 +6,7 @@ namespace Minigame
 {
     public class HP_MinigameFruitBehaviour : MonoBehaviour
     {
+        //Variables
         private HP_Minigame p_HpMiniGame;
         [SerializeField]
         private Rigidbody2D p_Rigid;
@@ -22,11 +23,11 @@ namespace Minigame
         {
             p_Rigid = GetComponent<Rigidbody2D>();
         }
-        private void Update()
-        {
-            RotateFruit();
-        }
 
+        /// <summary>
+        /// Destroy prefabs on trigger enter
+        /// </summary>
+        /// <param name="_col"></param>
         private void OnTriggerEnter2D(Collider2D _col)
         {
             switch (_col.gameObject.tag)
@@ -63,11 +64,6 @@ namespace Minigame
         public void SetHPMinigame(HP_Minigame _minigame)
         {
             p_HpMiniGame = _minigame;
-        }
-
-        private void RotateFruit()
-        {
-            //transform.Rotate(0, 0, Time.deltaTime * p_Rotation, Space.Self);
         }
     }
 }

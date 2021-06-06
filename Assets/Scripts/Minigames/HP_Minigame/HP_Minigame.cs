@@ -6,6 +6,7 @@ using UnityEngine.UI;
 namespace Minigame {
     public class HP_Minigame : MonoBehaviour
     {
+        //Variables
         [SerializeField]
         private Transform[] p_Spawners;
         [SerializeField]
@@ -38,8 +39,6 @@ namespace Minigame {
             IsActive = true;
             HasWon = false;
             IsDead = false;
-            //p_Score = 0;
-            //PlayerHP = 3;
             SetSpawnTimer(p_Spawnrate, p_Spawntime);
 
             LoseText.gameObject.SetActive(false);
@@ -53,12 +52,20 @@ namespace Minigame {
             SetText();     
         }
 
+        /// <summary>
+        /// Set spawntimer and spawnrate
+        /// </summary>
+        /// <param name="_spawnrate"></param>
+        /// <param name="_spawntime"></param>
         private void SetSpawnTimer(float _spawnrate, float _spawntime)
         {
             p_Spawnrate = _spawnrate;
             p_Spawntime = _spawntime;
         }
 
+        /// <summary>
+        /// Spawn random fruit from random spawner 
+        /// </summary>
         private void SpawnFruits()
         {
             if (Time.time > p_Spawntime)
@@ -79,6 +86,10 @@ namespace Minigame {
                 }
             }
         }
+
+        /// <summary>
+        /// Set Text score
+        /// </summary>
         private void SetText()
         {
             p_HPText.text = "HP: " + PlayerHP;
@@ -87,6 +98,10 @@ namespace Minigame {
             LoseText.text = "Game Over";
         }
 
+        /// <summary>
+        /// Add score to counter
+        /// </summary>
+        /// <param name="_point"></param>
         public void AddScore(int _point)
         {
             p_Score += _point;
@@ -99,6 +114,10 @@ namespace Minigame {
             }
         }
 
+        /// <summary>
+        /// Subtract score to HP
+        /// </summary>
+        /// <param name="_point"></param>
         public void SubtractHP(int _point)
         {
             PlayerHP -= _point;
@@ -111,6 +130,9 @@ namespace Minigame {
             }
         }
 
+        /// <summary>
+        /// Pause game on win or lose condition
+        /// </summary>
         private void PauseGame()
         {
             Time.timeScale = 0;

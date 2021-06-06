@@ -7,6 +7,7 @@ namespace Minigame
 {
     public class Attack_Minigame_FruitBehaviour : MonoBehaviour
     {
+        //Variables
         [SerializeField]
         private Rigidbody2D p_Rigid;
         [SerializeField]
@@ -25,7 +26,7 @@ namespace Minigame
             p_Camera = FindObjectOfType<Camera>();
             p_Rigid = GetComponent<Rigidbody2D>();
             p_ScoreHandler = FindObjectOfType<Attack_Minigame_ScoreHandler>();
-            p_Rigid.AddForce(transform.up * p_ForceAtSpawn, ForceMode2D.Impulse);
+            p_Rigid.AddForce(transform.up * p_ForceAtSpawn, ForceMode2D.Impulse); // Only add force once when spawn
         }
 
         // Update is called once per frame
@@ -44,6 +45,9 @@ namespace Minigame
             p_IsShot = false;
         }
 
+        /// <summary>
+        /// When input collides with fruit then destroy
+        /// </summary>
         private void CheckShot()
         {
             if (p_IsShot)
@@ -59,11 +63,6 @@ namespace Minigame
                     return;
                 }
             }
-        }
-
-        public void SetAttackScoreHandler(Attack_Minigame_ScoreHandler _scoreHandler)
-        {
-            p_ScoreHandler = _scoreHandler;
         }
     }
 }

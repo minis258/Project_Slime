@@ -8,18 +8,11 @@ namespace Minigame
     {
         [SerializeField]
         private float p_JumpHeight;
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
+        /// <summary>
+        /// Add force when the player lands on a platform
+        /// </summary>
+        /// <param name="_collision"></param>
         private void OnCollisionEnter2D(Collision2D _collision)
         {
 

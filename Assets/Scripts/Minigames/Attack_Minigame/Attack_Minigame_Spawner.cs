@@ -6,6 +6,7 @@ namespace Minigame
 {
     public class Attack_Minigame_Spawner : MonoBehaviour
     {
+        //Variables
         [SerializeField]
         private GameObject p_FruitPrefab;
         [SerializeField]
@@ -28,7 +29,11 @@ namespace Minigame
         {
 
         }
-
+        /// <summary>
+        /// A coroutine to spawn fruits 
+        /// spawner change the angle everytime they spawn a fruit
+        /// </summary>
+        /// <returns></returns>
         IEnumerator SpawnFruits()
         {
             while (true)
@@ -38,9 +43,8 @@ namespace Minigame
 
                 p_SpawnPointsIndex = Random.Range(0, p_SpawnPoints.Length);
                 Transform rdmSpawn = p_SpawnPoints[p_SpawnPointsIndex];
-                Quaternion defaultPos = rdmSpawn.transform.rotation;
-                //float rdmRot = Random.Range(-p_RdmSpawnerRotation, p_RdmSpawnerRotation);
-                rdmSpawn.transform.Rotate(0, 0, Random.Range(rdmSpawn.transform.rotation.z - p_RdmSpawnerRotation, rdmSpawn.transform.rotation.z + p_RdmSpawnerRotation));
+                Quaternion defaultPos = rdmSpawn.transform.rotation; // Save the rotation before it rotate
+                rdmSpawn.transform.Rotate(0, 0, Random.Range(rdmSpawn.transform.rotation.z - p_RdmSpawnerRotation, rdmSpawn.transform.rotation.z + p_RdmSpawnerRotation)); // Random rotate between 2 angles and random degree
 
                 GameObject obj = Instantiate(p_FruitPrefab, rdmSpawn.position, rdmSpawn.rotation);
 

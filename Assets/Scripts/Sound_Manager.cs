@@ -1,7 +1,11 @@
+//###### Created by Minh #####
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Set volumes
+/// </summary>
 public class Sound_Manager : MonoBehaviour
 {
     private AudioSource p_AudioSource;

@@ -6,6 +6,9 @@ namespace Minigame
 {
     public class Despawner : MonoBehaviour
     {
+        /// <summary>
+        /// Variables
+        /// </summary>
         private Spd_Minigame p_SpdMinigame;
         [SerializeField]
         private GameObject p_Player;
@@ -30,11 +33,19 @@ namespace Minigame
 
         private Vector2 p_StartPos;
 
+        /// <summary>
+        /// Save start pos
+        /// </summary>
         private void Start()
         {
             p_StartPos.y = p_Player.transform.position.y;
         }
 
+        /// <summary>
+        /// Spawn random platforms and despawn platforms that the player has already passed 
+        /// After a definite distance change gras platforms to cloud platforms
+        /// </summary>
+        /// <param name="_collision"></param>
         private void OnTriggerEnter2D(Collider2D _collision)
         {
             float currentDis = p_Player.transform.position.y - p_StartPos.y;

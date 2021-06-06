@@ -6,6 +6,7 @@ namespace Minigame
 {
     public class Defense_Stones_Spawner : MonoBehaviour
     {
+        // A lot of variables
         [SerializeField]
         private Transform[] p_LongStoneSpawners;
         [SerializeField]
@@ -55,7 +56,7 @@ namespace Minigame
         void Start()
         {
             IsActive = true;
-            SetSpawnTimer(p_Spawnrate, p_Spawntime);
+            SetSpawnTimer(p_Spawnrate, p_Spawntime); // Begins counting to spawn prefabs
             p_NewPos = p_StartObject.transform.position;
         }
 
@@ -66,12 +67,20 @@ namespace Minigame
             SpawnAllLongStones();
         }
 
+        /// <summary>
+        /// Set spawntimer and spawnrate
+        /// </summary>
+        /// <param name="_spawnrate"></param>
+        /// <param name="_spawntime"></param>
         private void SetSpawnTimer(float _spawnrate, float _spawntime)
         {
             p_Spawnrate = _spawnrate;
             p_Spawntime = _spawntime;
         }
 
+        /// <summary>
+        /// Spawn random small stone prefabs at a spawn range on x axis 
+        /// </summary>
         private void SpawnStone()
         {
             p_MinSpawnRangeX = p_StoneSpawner.transform.position.x - p_StoneSpawnRange;
@@ -87,6 +96,7 @@ namespace Minigame
                 if (!IsActive)
                 {
                     float distY = Vector3.Distance(temp, p_TempPos);
+                    // If the the stone out of the range between long and short stone
                     if (distY > p_STSDist || distY < p_STSDist)
                     {
                         IsActive = true;
@@ -106,6 +116,9 @@ namespace Minigame
             }
         }
 
+        /// <summary>
+        /// The outer stone walls always spawn at the spawnrate and the other obstacles spawn at definite number of waves
+        /// </summary>
         private void SpawnAllLongStones()
         {
             foreach (var stones in p_LongStoneSpawners)

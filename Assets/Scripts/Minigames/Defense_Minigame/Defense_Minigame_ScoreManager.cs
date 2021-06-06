@@ -7,14 +7,17 @@ namespace Minigame
 {
     public class Defense_Minigame_ScoreManager : MonoBehaviour
     {
+        //Variables
         private Vector2 p_StartPos;
 
-       [SerializeField]
+        [SerializeField]
         private Text p_ScoreText;
 
         public float p_CurrentDist;
         public int p_Score;
+
         // Start is called before the first frame update
+        // Save startpos
         void Start()
         {
             p_StartPos = transform.position;
@@ -26,6 +29,9 @@ namespace Minigame
             CalculateScore();
         }
 
+        /// <summary>
+        /// Calculate distance
+        /// </summary>
         private void CalculateScore()
         {
             p_CurrentDist = transform.position.y;

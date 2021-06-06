@@ -6,6 +6,7 @@ namespace Minigame
 {
     public class MouseHandlerMinigame : MonoBehaviour
     {
+        //Variables
         private bool p_IsDragged = false;
         [SerializeField]
         private Collider2D _col;
@@ -41,6 +42,9 @@ namespace Minigame
             p_IsDragged = false;
         }
 
+        /// <summary>
+        /// Drag the player with the limit of max range on how far the player can be dragged
+        /// </summary>
         private void CheckDragging()
         {
             if (p_IsDragged)
@@ -70,6 +74,9 @@ namespace Minigame
             }
         }
 
+        /// <summary>
+        /// Gizmos drawing for showing drag max range
+        /// </summary>
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.cyan;

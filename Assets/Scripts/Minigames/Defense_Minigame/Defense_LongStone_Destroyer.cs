@@ -6,22 +6,13 @@ namespace Minigame
 {
     public class Defense_LongStone_Destroyer : MonoBehaviour
     {
+        //Variables
         [SerializeField]
         private Collider2D p_LongStoneCol;
         [SerializeField]
         private int p_DestroyCounter = 0;
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
+        // The Longstone prefab is destroyed after 3 taps
         private void OnMouseDown()
         {
             if (p_LongStoneCol.gameObject)

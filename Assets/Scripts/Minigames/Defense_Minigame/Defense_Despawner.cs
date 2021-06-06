@@ -6,21 +6,12 @@ namespace Minigame
 {
     public class Defense_Despawner : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
+        /// <summary>
+        /// This script is only to destroy gameobjects
+        /// </summary>
+        /// <param name="collision"></param>
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!");
             Destroy(collision.gameObject);
         }
     }
