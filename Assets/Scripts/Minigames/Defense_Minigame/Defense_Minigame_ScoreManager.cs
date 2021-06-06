@@ -28,12 +28,6 @@ namespace Minigame
 
         private void CalculateScore()
         {
-            //if (p_StartPos.y > p_CurrentDist)
-            //{
-            //    p_CurrentDist = this.transform.position.y;
-            //}
-
-            //p_Score = Mathf.Round(p_CurrentDist);
             p_CurrentDist = transform.position.y;
             p_Score = (int)p_CurrentDist - (int)p_StartPos.y;
             p_ScoreText.text = "Score: " + p_Score.ToString();
