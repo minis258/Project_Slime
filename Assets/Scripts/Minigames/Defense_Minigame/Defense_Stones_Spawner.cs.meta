@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6f77ebacb0dd9354e937b2c5938b0ac1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - p_StoneSpawner: {instanceID: 0}
+  - p_ShortStonePrefab: {fileID: 4693638901083319127, guid: fcd2c39f09118f540926fec306ce4acd, type: 3}
+  - p_LongStonePrefab: {fileID: 551557822169345034, guid: fc257b9524aa4f245b811a1ec0fbe9f0, type: 3}
+  - p_VerticalStonePrefab: {fileID: 1312990607440300537, guid: f828be2b35483ed4faaafce96b2a38b4, type: 3}
+  - p_HorizontalStonePrefab: {fileID: 5906426232247144744, guid: 7af12e6f9bf082144b257b94baadaacf, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

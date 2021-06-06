@@ -126,5 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e4ebe84f9dd9e4d82f536d20c931f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p_Col: {fileID: -9034861721998889534}
+  p_ShortStoneCol: {fileID: -9034861721998889534}
+  p_Spawner: {fileID: 0}
   p_MoveRange: 15
