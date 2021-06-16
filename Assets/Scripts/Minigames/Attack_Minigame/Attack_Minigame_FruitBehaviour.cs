@@ -13,6 +13,8 @@ namespace Minigame
         [SerializeField]
         private Collider2D p_FruitCol;
         [SerializeField]
+        private GameObject p_SmashedFruit;
+        [SerializeField]
         private float p_ForceAtSpawn;
 
         private Attack_Minigame_ScoreHandler p_ScoreHandler;
@@ -56,7 +58,9 @@ namespace Minigame
                 {
                     Vector3 mousePos = p_Camera.ScreenToWorldPoint(Input.mousePosition);
                     p_ScoreHandler.p_Score++;
+                    GameObject obj = Instantiate(p_SmashedFruit, transform.position, transform.rotation);
                     Destroy(p_FruitCol.gameObject);
+
                 }
                 else
                 {

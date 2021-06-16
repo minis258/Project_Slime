@@ -23,10 +23,12 @@ namespace Minigame
         private Button p_BackButton;
         [SerializeField]
         private Button p_ResumeButton;
+        [SerializeField]
+        private Camera p_Camera;
         // Start is called before the first frame update
         void Start()
         {
-
+            p_PauseButton.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -35,40 +37,50 @@ namespace Minigame
 
         }
 
-        private void SelectHP()
+        public void SelectHP()
         {
+            p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
             p_HPMinigame.SetActive(true);
+            p_PauseButton.gameObject.SetActive(true);
         }
 
-        private void SelectSPD()
+        public void SelectSPD()
         {
+            p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
             p_SPDMinigame.SetActive(true);
+            p_PauseButton.gameObject.SetActive(true);
         }
 
-        private void SelectDEF()
+        public void SelectDEF()
         {
+            p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
             p_DEFMinigame.SetActive(true);
+            p_PauseButton.gameObject.SetActive(true);
         }
 
-        private void SelectATK()
+        public void SelectATK()
         {
+            p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
             p_ATKMinigame.SetActive(true);
+            p_PauseButton.gameObject.SetActive(true);
         }
 
-        private void SelectStart()
+        public void SelectStart()
         {
             p_HPMinigame.SetActive(false);
             p_SPDMinigame.SetActive(false);
             p_DEFMinigame.SetActive(false);
             p_ATKMinigame.SetActive(false);
+            p_Camera.gameObject.SetActive(true);
             p_Start.SetActive(true);
+            p_PauseButton.gameObject.SetActive(false);
         }
 
-        private void PauseGame()
+        public void PauseGame()
         {
             Time.timeScale = 0;
             p_PauseButton.gameObject.SetActive(false);
@@ -76,12 +88,17 @@ namespace Minigame
             p_ResumeButton.gameObject.SetActive(true);
         }
 
-        private void ResumeGame()
+        public void ResumeGame()
         {
             Time.timeScale = 1;
             p_PauseButton.gameObject.SetActive(true);
             p_BackButton.gameObject.SetActive(false);
             p_ResumeButton.gameObject.SetActive(false);
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
         }
     }
 }
