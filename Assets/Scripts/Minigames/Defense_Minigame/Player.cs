@@ -8,6 +8,10 @@ namespace Minigame
     {
         [SerializeField]
         private float p_MoveSpeed;
+        [SerializeField]
+        private Defense_Minigame_ScoreManager p_Manager;
+        [SerializeField]
+        private GameObject p_Player;
 
         private bool p_IsActive = false;
 
@@ -29,6 +33,16 @@ namespace Minigame
             if (p_IsActive)
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y + p_MoveSpeed * Time.deltaTime);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Enemy")
+            {
+                p_Manager.EndRound();
+                Destroy(p_Player);
+                Time.timeScale = 0;
             }
         }
     }

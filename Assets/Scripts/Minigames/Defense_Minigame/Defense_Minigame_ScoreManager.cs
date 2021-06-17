@@ -12,6 +12,8 @@ namespace Minigame
 
         [SerializeField]
         private Text p_ScoreText;
+        [SerializeField]
+        private Text p_EndRoundText;
 
         public float p_CurrentDist;
         public int p_Score;
@@ -37,6 +39,12 @@ namespace Minigame
             p_CurrentDist = transform.position.y;
             p_Score = (int)p_CurrentDist - (int)p_StartPos.y;
             p_ScoreText.text = "Score: " + p_Score.ToString();
+        }
+
+        public void EndRound()
+        {
+            p_EndRoundText.gameObject.SetActive(true);
+            p_EndRoundText.text = "Your distance: " + p_Score + " m";
         }
     }
 }

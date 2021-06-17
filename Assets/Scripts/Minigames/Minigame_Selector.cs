@@ -78,22 +78,26 @@ namespace Minigame
             p_Camera.gameObject.SetActive(true);
             p_Start.SetActive(true);
             p_PauseButton.gameObject.SetActive(false);
+            p_BackButton.gameObject.SetActive(false);
+            p_ResumeButton.gameObject.SetActive(false);
         }
 
         public void PauseGame()
         {
-            Time.timeScale = 0;
+            GameObject obj = GameObject.FindGameObjectWithTag("Player");
+            this.transform.position = obj.transform.position;
             p_PauseButton.gameObject.SetActive(false);
             p_BackButton.gameObject.SetActive(true);
             p_ResumeButton.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
 
         public void ResumeGame()
         {
-            Time.timeScale = 1;
             p_PauseButton.gameObject.SetActive(true);
             p_BackButton.gameObject.SetActive(false);
             p_ResumeButton.gameObject.SetActive(false);
+            Time.timeScale = 1;
         }
 
         public void QuitGame()

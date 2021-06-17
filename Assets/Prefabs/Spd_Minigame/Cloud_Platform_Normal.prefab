@@ -231,3 +231,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_JumpHeight: 700
+  p_Timer: 0
+  p_MaxTimer: 5

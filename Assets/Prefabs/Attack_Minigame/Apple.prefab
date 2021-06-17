@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: -7920101802459471008}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: Enemy
+  m_TagString: GoodFruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,3 +221,4 @@ MonoBehaviour:
   p_FruitCol: {fileID: 7689775959918561309}
   p_SmashedFruit: {fileID: 1382174278698877863, guid: af429a98d2e1595478ae7641e3f48e61, type: 3}
   p_ForceAtSpawn: 20
+  p_ScoreHandler: {fileID: 2208363820091330625, guid: 2549d5618e1d14d459745849c134daa6, type: 3}

@@ -16,7 +16,7 @@ namespace Minigame
         private GameObject p_SmashedFruit;
         [SerializeField]
         private float p_ForceAtSpawn;
-
+        [SerializeField]
         private Attack_Minigame_ScoreHandler p_ScoreHandler;
 
         private bool p_IsShot = false;
@@ -54,7 +54,7 @@ namespace Minigame
         {
             if (p_IsShot)
             {
-                if (p_FruitCol.gameObject.tag == "Enemy")
+                if (p_FruitCol.gameObject.tag == "GoodFruit")
                 {
                     Vector3 mousePos = p_Camera.ScreenToWorldPoint(Input.mousePosition);
                     p_ScoreHandler.p_Score++;
@@ -62,11 +62,25 @@ namespace Minigame
                     Destroy(p_FruitCol.gameObject);
 
                 }
+                if (p_FruitCol.gameObject.tag == "BadFruit")
+                {
+                    Vector3 mousePos = p_Camera.ScreenToWorldPoint(Input.mousePosition);
+                    GameObject obj = Instantiate(p_SmashedFruit, transform.position, transform.rotation);
+                    Destroy(p_FruitCol.gameObject);
+
+                    EndRound();
+
+                }
                 else
                 {
                     return;
                 }
             }
+        }
+
+        private void EndRound()
+        {
+            p_ScoreHandler.EndRound = true;
         }
     }
 }

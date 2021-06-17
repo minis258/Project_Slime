@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 228129320945016715}
   m_Layer: 0
   m_Name: Blueberry
-  m_TagString: Enemy
+  m_TagString: GoodFruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,3 +221,4 @@ MonoBehaviour:
   p_FruitCol: {fileID: 3919840196595788205}
   p_SmashedFruit: {fileID: 5664677173107971383, guid: b8936c9039933e4489030167bfd4a019, type: 3}
   p_ForceAtSpawn: 20
+  p_ScoreHandler: {fileID: 2208363820091330625, guid: 2549d5618e1d14d459745849c134daa6, type: 3}

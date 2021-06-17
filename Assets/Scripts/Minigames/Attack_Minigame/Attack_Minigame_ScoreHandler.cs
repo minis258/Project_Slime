@@ -7,11 +7,13 @@ namespace Minigame
 {
     public class Attack_Minigame_ScoreHandler : MonoBehaviour
     {
-        //Variables
-        private Attack_Minigame_FruitBehaviour p_Fruit;
         public int p_Score;
         [SerializeField]
         private Text p_Text;
+        [SerializeField]
+        private Text p_EndRoundText;
+
+        public bool EndRound = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,6 +24,7 @@ namespace Minigame
         void Update()
         {
             CheckScore();
+            CheckRound();
         }
         /// <summary>
         /// Set Score text
@@ -29,6 +32,20 @@ namespace Minigame
         private void CheckScore()
         {
             p_Text.text = "Score: " + p_Score;
+        }
+
+        private void CheckRound()
+        {
+            if (EndRound == true)
+            {
+                p_EndRoundText.gameObject.SetActive(true);
+                p_EndRoundText.text = "You lost";
+                Time.timeScale = 0;
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5777358772526430522}
   m_Layer: 0
   m_Name: Orange
-  m_TagString: Enemy
+  m_TagString: GoodFruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   p_FruitCol: {fileID: 6230710139827758895}
   p_SmashedFruit: {fileID: 1305681047058662785, guid: 259bbd91a1e9ea344821b731f4441866, type: 3}
   p_ForceAtSpawn: 20
+  p_ScoreHandler: {fileID: 2208363820091330625, guid: 2549d5618e1d14d459745849c134daa6, type: 3}
 --- !u!1 &5268290062992645429
 GameObject:
   m_ObjectHideFlags: 0

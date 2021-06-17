@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4486141190621870085}
   m_Layer: 0
   m_Name: Cherry
-  m_TagString: Enemy
+  m_TagString: GoodFruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,3 +221,4 @@ MonoBehaviour:
   p_FruitCol: {fileID: 3119885346966672197}
   p_SmashedFruit: {fileID: 1197529629849348369, guid: 77eb6c6688c973f46a2dec2dbd432f52, type: 3}
   p_ForceAtSpawn: 20
+  p_ScoreHandler: {fileID: 2208363820091330625, guid: 2549d5618e1d14d459745849c134daa6, type: 3}
