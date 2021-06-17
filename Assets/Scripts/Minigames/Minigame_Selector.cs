@@ -9,6 +9,8 @@ namespace Minigame
     public class Minigame_Selector : MonoBehaviour
     {
         [SerializeField]
+        private GameObject p_Selector;
+        [SerializeField]
         private GameObject p_HPMinigame;
         [SerializeField]
         private GameObject p_SPDMinigame;
@@ -51,6 +53,9 @@ namespace Minigame
         {
             p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
+            p_VideoPlayer.gameObject.SetActive(false);
+            p_IdleVideoPlayer.gameObject.SetActive(false);
+            p_Selector.gameObject.SetActive(false);
             p_HPMinigame.SetActive(true);
             p_PauseButton.gameObject.SetActive(true);
         }
@@ -59,6 +64,9 @@ namespace Minigame
         {
             p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
+            p_VideoPlayer.gameObject.SetActive(false);
+            p_IdleVideoPlayer.gameObject.SetActive(false);
+            p_Selector.gameObject.SetActive(false);
             p_SPDMinigame.SetActive(true);
             p_PauseButton.gameObject.SetActive(true);
         }
@@ -67,6 +75,9 @@ namespace Minigame
         {
             p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
+            p_VideoPlayer.gameObject.SetActive(false);
+            p_IdleVideoPlayer.gameObject.SetActive(false);
+            p_Selector.gameObject.SetActive(false);
             p_DEFMinigame.SetActive(true);
             p_PauseButton.gameObject.SetActive(true);
         }
@@ -75,6 +86,9 @@ namespace Minigame
         {
             p_Camera.gameObject.SetActive(false);
             p_Start.SetActive(false);
+            p_VideoPlayer.gameObject.SetActive(false);
+            p_IdleVideoPlayer.gameObject.SetActive(false);
+            p_Selector.gameObject.SetActive(false);
             p_ATKMinigame.SetActive(true);
             p_PauseButton.gameObject.SetActive(true);
         }
@@ -85,8 +99,10 @@ namespace Minigame
             p_SPDMinigame.SetActive(false);
             p_DEFMinigame.SetActive(false);
             p_ATKMinigame.SetActive(false);
+            p_Selector.gameObject.SetActive(true);
             p_Camera.gameObject.SetActive(true);
-            p_Start.SetActive(true);
+            p_VideoPlayer.Play();
+            StartCoroutine(WaitForClip());
             p_PauseButton.gameObject.SetActive(false);
             p_BackButton.gameObject.SetActive(false);
             p_ResumeButton.gameObject.SetActive(false);

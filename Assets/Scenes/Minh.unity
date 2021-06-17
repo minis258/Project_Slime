@@ -3268,6 +3268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fb633302b03df42bc7d238f05b2f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p_Selector: {fileID: 625318647}
   p_HPMinigame: {fileID: 766638942}
   p_SPDMinigame: {fileID: 703976447}
   p_DEFMinigame: {fileID: 1041600755}
