@@ -11,15 +11,9 @@ namespace Minigame
         [SerializeField]
         private SpdM_Movement p_Move;
         [SerializeField]
-        private SpdM_PlatformHandler p_SPDHandler;
-        [SerializeField]
         private Text p_ScoreText;
         [SerializeField]
-        private Text p_EndText;
-        [SerializeField]
-        private Collider2D p_Player;
-
-        private string p_Score;
+        private GameObject p_Player;
 
         public float p_MinHeight;
         // Start is called before the first frame update
@@ -32,7 +26,6 @@ namespace Minigame
         void Update()
         {
             CalculateScore();
-            Debug.Log(p_SPDHandler.p_Timer);
         }
         ///Count the distance between startpos and current pos as score
         private void CalculateScore()
@@ -41,28 +34,7 @@ namespace Minigame
             {
                 p_MinHeight = p_Move.p_Rigid.transform.position.y;
             }
-            p_Score = Mathf.Round(p_MinHeight).ToString();
-            p_ScoreText.text = "Distance: " + p_Score; // mathf.round to round decimal numbers
-        }
-
-        private void CheckDeath()
-        {
-            if (p_SPDHandler.p_Timer >= p_SPDHandler.p_MaxTimer)
-            {
-                Destroy(p_Player);
-                p_EndText.gameObject.SetActive(true);
-                p_EndText.text = "Your score was: " + p_Score;
-                Time.timeScale = 0;
-            }
-            else
-            {
-                p_EndText.gameObject.SetActive(false);
-            }
-        }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            p_SPDHandler = this.GetComponent<SpdM_PlatformHandler>();
+            p_ScoreText.text = "Distance: " + Mathf.Round(p_MinHeight).ToString(); // mathf.round to round decimal numbers
         }
     }
 }

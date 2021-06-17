@@ -149,8 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_JumpHeight: 700
-  p_Timer: 0
-  p_MaxTimer: 5
 --- !u!1 &5974992421266421318
 GameObject:
   m_ObjectHideFlags: 0
