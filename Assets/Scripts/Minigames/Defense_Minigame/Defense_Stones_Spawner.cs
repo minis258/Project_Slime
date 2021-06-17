@@ -11,7 +11,6 @@ namespace Minigame
         private Transform[] p_LongStoneSpawners;
         [SerializeField]
         private Transform p_StoneSpawner;
-        private int p_SpawnPrefabs;
         [SerializeField]
         private GameObject p_ShortStonePrefab;
         [SerializeField]
@@ -22,6 +21,8 @@ namespace Minigame
         private GameObject p_HorizontalStonePrefab;
         [SerializeField]
         private GameObject p_StartObject;
+        [SerializeField]
+        private GameObject p_BackgroundPrefab;
         [SerializeField]
         private float p_Spawnrate;
         [SerializeField]
@@ -121,9 +122,9 @@ namespace Minigame
         /// </summary>
         private void SpawnAllLongStones()
         {
-            foreach (var stones in p_LongStoneSpawners)
+            foreach (var spawner in p_LongStoneSpawners)
             {
-                float dist = Vector3.Distance(p_NewPos, stones.position);
+                float dist = Vector3.Distance(p_NewPos, spawner.position);
                 Vector3 temp;
 
                 if (dist >= p_MaxSpawnRangeY)

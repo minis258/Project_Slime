@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 namespace Minigame
 {
@@ -25,16 +26,25 @@ namespace Minigame
         private Button p_ResumeButton;
         [SerializeField]
         private Camera p_Camera;
+        [SerializeField]
+        private VideoPlayer p_VideoPlayer;
+        [SerializeField]
+        private VideoPlayer p_IdleVideoPlayer;
         // Start is called before the first frame update
         void Start()
         {
             p_PauseButton.gameObject.SetActive(false);
+
+            if (!p_VideoPlayer.isPlaying)
+            {
+                p_Start.gameObject.SetActive(false);
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            StartCoroutine(WaitForClip());
         }
 
         public void SelectHP()
@@ -103,6 +113,34 @@ namespace Minigame
         public void QuitGame()
         {
             Application.Quit();
+        }
+
+        //private void CheckClip()
+        //{
+        //    if (p_VideoPlayer.isPlaying)
+        //    {
+        //        p_Start.gameObject.SetActive(false);
+        //    }
+        //    else if (!p_VideoPlayer.isPlaying)
+        //    {
+        //        p_Start.gameObject.SetActive(true);
+        //    }
+        //}
+
+        IEnumerator WaitForClip()
+        {
+            yield return new WaitForSeconds(1);
+
+            if (p_VideoPlayer.isPlaying)
+            {
+                p_Start.gameObject.SetActive(false);
+            }
+            else if (!p_VideoPlayer.isPlaying)
+            {
+                p_Start.gameObject.SetActive(true);
+                p_VideoPlayer.gameObject.SetActive(false);
+                p_IdleVideoPlayer.gameObject.SetActive(true);
+            }
         }
     }
 }
